@@ -31,6 +31,8 @@ pub enum SlackApiTokenType {
     User,
     #[serde(rename = "app")]
     App,
+    #[serde(rename = "session")]
+    Session,
 }
 
 #[allow(clippy::to_string_trait_impl)]
@@ -40,6 +42,7 @@ impl ToString for SlackApiTokenType {
             SlackApiTokenType::Bot => "bot".into(),
             SlackApiTokenType::User => "user".into(),
             SlackApiTokenType::App => "app".into(),
+            SlackApiTokenType::Session => "session".into(),
         }
     }
 }
